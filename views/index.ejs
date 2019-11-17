@@ -1,34 +1,27 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
 
-    <title>CheckUserinputpalindrome</title>
+<!doctype html>
+<html>
+<head>
+    <title>ME Fans</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  </head>
-  <body>
-    <h1>Is your word a palindrome?</h1>
-    <h2>Instructions:Enter a word below and you'll see if its a palindrome.</h2>
-    <form class="" action="/path" method="POST">
-      <input type="text" name="pal" placeholder="input word">
-      <input type="submit" name="" value="Click">
-      <!-- <h3></h3> -->
-    </form>
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
 
-    <ul class="Palindrome">
-  <% for(var i=0; i< Palindrome.length; i++) {%>
-    <li class="Palindromes">
-      <span><%= Palindrome[i].pal %></span>
-      <span class="spanTwo"><%= Palindrome[i].resp %></span>
+    <div class="jumbotron text-center">
+        <h1>Secrets</h1>
+        <img src="img/secrets.jpg" >
 
-      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
-    </li>
-<% } %>
-</ul>
+        <p>Login or Signup:</p>
 
-<script type="text/javascript" src="main.js">
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
 
-</script>
-  </body>
+    </div>
+
+</div>
+</body>
 </html>

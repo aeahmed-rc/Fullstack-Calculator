@@ -35,16 +35,21 @@ var trash = document.getElementsByClassName("fa-trash");
 
     Array.from(trash).forEach(function(element) {
           element.addEventListener('click', function(){
-            const pal= this.parentNode.parentNode.childNodes[1].innerText
-            const resp= this.parentNode.parentNode.childNodes[3].innerText
+            const numone= this.parentNode.parentNode.childNodes[1].innerText
+            const numtwo= this.parentNode.parentNode.childNodes[3].innerText
+            const division=this.parentNode.parentNode.childNodes[5].innerText
+            const add=this.parentNode.parentNode.childNodes[7].innerText
             fetch('path', {
               method: 'delete',
               headers: {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                'pal': pal,
-                'resp':resp,
+                'numone': numone,
+                'numtwo':numtwo,
+                'division':division,
+                'add':add
+
 
 
               })

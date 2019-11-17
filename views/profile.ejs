@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  </head>
+  <body>
+    <h1>Quick Maths</h1>
+    <h2>Instructions:Enter Two numbers and get the division.</h2>
+    <form class="" action="/path" method="POST">
+      <input type="text" name="numone" placeholder="Number One">
+      <input type="text" name="numtwo" value="" placeholder="Number Two">
+      <input type="submit" name="" value="Calculate">
+      <!-- <h3></h3> -->
+    </form>
+
+    <ul class="Calculator">
+  <% for(var i=0; i< Response.length; i++) {%>
+    <li class="Calculator">
+      <span><%= Response[i].numone %></span>
+      </li>
+      <li><span class="spanTwo"><%= Response[i].numtwo %></span></li>
+      <li><span><%= Response[i].division %></span></li>
+      <li><span><%= Response[i].add %></span></li>
+
+    <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+<% } %>
+</ul>
+
+<script type="text/javascript" src="main.js">
+
+</script>
+  </body>
+</html>

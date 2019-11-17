@@ -31,31 +31,29 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   //console.log(db)
-  db.collection('Palindrome').find().toArray((err, result) => {
+  db.collection('math').find().toArray((err, result) => {
 
     if (err) return console.log(err)
     // console.log(result)
     res.render('index.ejs', {
-      Palindrome: result
+      Response: result
     })
 
   })
 })
 
 app.post('/path', (req, res) => {
-console.log(req.body.pal)
-  let word = req.body.pal
-
-  let wordReversed = word.split('').reverse().join('')
-  let ifPalindrome = "This is not a palindrome"
-
-  if (word === wordReversed) {
-  ifPalindrome="This is a Palindrome"
-  }
-  console.log(ifPalindrome)
-  db.collection('Palindrome').save({
-    pal: word,
-    resp: ifPalindrome
+console.log(req.body.numone)
+  let numone = req.body.numone
+  let numtwo= req.body.numtwo
+  let division= Math.round(numone/numtwo).toFixed(2)
+  let add= Number(numone) + Number(numtwo)
+  console.log(add)
+  db.collection('math').save({
+    numone: numone,
+    numtwo: numtwo,
+    division:division,
+    add:add
   }, (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
@@ -65,29 +63,32 @@ console.log(req.body.pal)
 
 })
 
-app.put('/path', (req, res) => {
-  db.collection('Palindrome')
-    .findOneAndUpdate({
-      pal: 'narth'
-    }, {
-      $set: {
-        pal: req.body.pal
-      }
-    }, {
-      sort: {
-        _id: -1
-      },
-      upsert: true
-    }, (err, result) => {
-      if (err) return res.send(err)
-      res.send(result)
-    })
-})
+// app.put('/path', (req, res) => {
+//   db.collection('Palindrome')
+//     .findOneAndUpdate({
+//       pal: 'narth'
+//     }, {
+//       $set: {
+//         pal: req.body.pal
+//       }
+//     }, {
+//       sort: {
+//         _id: -1
+//       },
+//       upsert: true
+//     }, (err, result) => {
+//       if (err) return res.send(err)
+//       res.send(result)
+//     })
+// })
 
 app.delete('/path', (req, res) => {
-  console.log("WTF")
-  db.collection('Palindrome').findOneAndDelete({
-    pal: req.body.pal
+  console.log('work')
+  db.collection('math').findOneAndDelete({
+    numone:req.body.numone,
+    numtwo:req.body.numtwo,
+    division:req.body.division,
+    add:req.body.add
   }, (err, result) => {
     if (err) return res.send(500, err)
     res.send('Message deleted!')
