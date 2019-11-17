@@ -3,55 +3,9 @@
 }
 body{
   font-family: sans-serif;
+  background-color:
+#aaccff;
 }
-h1{
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-button{
-  color: black;
-  background-color: red;
-  font-size: 20px;
-display: block;
-margin:auto;
-width:20%;
-}
-input{
-  margin: auto;
-  padding: 5px;
-  display: block;
-  font-size: 30px;
-  margin-bottom: 25px;
-}
-body{
-  background-color: white;
-  font-family: sans-serif;
-}
-h3{
-  font-family: sans-serif;
-  color:white;
-  font-size: 30px;
-  text-align: center;
-}
-.Palindromes span{
-  text-align: center;
+.sign a{
   color:black;
-
-}
-li {
-  font-family: sans-serif;
-  padding:5px;
-  color: red;
-}
-li span{
-  font-family: monospace;
-  font-size: 30px;
-
-}
-.spanTwo{
-  font-size: 20px;
-  font-weight: 400;
-
 }

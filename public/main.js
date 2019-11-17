@@ -6,46 +6,29 @@ let result=document.querySelector('h3')
 var trash = document.getElementsByClassName("fa-trash");
 
 
-// btn.addEventListener('click',()=>{
-  // let input=document.querySelector('input').value.toLowerCase()
-//   //
-//   // fetch(`/api?word=${input}`)
-//   // const name = this.parentNode.parentNode.childNodes[1].innerText
-//   //     const msg = this.parentNode.parentNode.childNodes[3].innerText
-//   //     const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-      // fetch('Palindrome', {
-      //   method: 'put',
-      //   headers: {'Content-Type': 'application/json'},
-      //   body: JSON.stringify({
-      //     pal: input,
-      //
-      //   })
-      // })
-      // .then(response => {
-      //   if (response.ok) return response.json()
-      // })
-      // .then(data => {
-      //   console.log(data)
-      //   window.location.reload(true)
-      // })
-
 
 
 
 
     Array.from(trash).forEach(function(element) {
           element.addEventListener('click', function(){
+
             const numone= this.parentNode.parentNode.childNodes[1].innerText
             const numtwo= this.parentNode.parentNode.childNodes[3].innerText
-            const division=this.parentNode.parentNode.childNodes[5].innerText
-            const add=this.parentNode.parentNode.childNodes[7].innerText
+            const division= this.parentNode.parentNode.childNodes[5].innerText
+            const add= this.parentNode.parentNode.childNodes[7].innerText
+            // const numone=document.getElementsByClassName('spanOne')
+            // console.log(numone)
+            // const numtwo=document.getElementsByClassName('spanTwo')
+            // const division=document.getElementsByClassName('spanThree')
+            // const add=document.getElementsByClassName('spanFour')
             fetch('path', {
               method: 'delete',
               headers: {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                'numone': numone,
+                'numone':numone ,
                 'numtwo':numtwo,
                 'division':division,
                 'add':add

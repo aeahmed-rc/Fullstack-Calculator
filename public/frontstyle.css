@@ -1,0 +1,33 @@
+
+.jumbotron{
+  background:none;
+}
+.jumbotron h1{
+
+font-family: serif;
+}
+body{
+  background-color: #aaccff;
+}
+button{
+padding: 2px;
+  width:10%;
+  border-radius: 10px;
+  border-width: thick;
+border-color: #0f4a00;
+box-shadow: 10px 5px 5px black;
+}
+div{
+  padding:2px;
+}
+
+.btn-default{
+  padding: 2px;
+    width:10%;
+    border-radius: 10px;
+    border-width: thick;
+  border-color: #0f4a00;
+  box-shadow: 10px 5px 5px black;
+
+  
+}
